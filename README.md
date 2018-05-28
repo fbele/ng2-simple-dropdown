@@ -85,7 +85,7 @@ export class AppComponent {
 ## Run Included Demo
 
 ```shell
-git clone https://github.com/nzick/ng2-simple-dropdown.git --depth 1
+git clone https://github.com/fbele/ng2-simple-dropdown.git --depth 1
 cd ng2-simple-dropdown
 npm install
 npm start

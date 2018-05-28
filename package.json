@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nzick/ng2-simple-dropdown"
+    "url": "https://github.com/fbele/ng2-simple-dropdown"
   },
   "keywords": [
     "angular",
@@ -33,9 +33,9 @@
   ],
   "author": "Nicolas Zick <nicolaszick@gmail.com>",
   "bugs": {
-    "url": "https://github.com/nzick/ng2-simple-dropdown/issues"
+    "url": "https://github.com/fbele/ng2-simple-dropdown/issues"
   },
-  "homepage": "https://github.com/nzick/ng2-simple-dropdown#readme",
+  "homepage": "https://github.com/fbele/ng2-simple-dropdown#readme",
   "main": "./lib-dist/ng2-simple-dropdown.module.js",
   "module": "./lib-dist/ng2-simple-dropdown.module.js",
   "types": "./lib-dist/ng2-simple-dropdown.module.d.ts",

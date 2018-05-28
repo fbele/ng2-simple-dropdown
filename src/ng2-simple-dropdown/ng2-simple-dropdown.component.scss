@@ -1,0 +1,163 @@
+$black: #3C3732;
+$blueB: #019BA5;
+$grey: #C4C3C1;
+$fontAdditional: $black;
+$fontDisabled: rgba(0, 0, 0, 0.3);
+
+@mixin inputText() {
+    background-color: #fff;
+    border: 1px solid $black;
+    color: $fontAdditional;
+    font-size: 17px;
+	height: 40px;
+    padding: 0 10px;
+    width: 100%;
+	&[disabled] {
+        border: 1px solid $grey;
+        color: $fontDisabled;
+        &::-webkit-input-placeholder {
+            color: $fontDisabled;
+        }
+        &::-moz-placeholder {
+            color: $fontDisabled;
+        }
+        &:-ms-input-placeholder {
+            color: $fontDisabled;
+        }
+        &:-moz-placeholder {
+            color: $fontDisabled;
+        }
+    }
+    &::-webkit-input-placeholder {
+        color: $fontAdditional;
+        opacity: 0.6;
+    }
+    &::-moz-placeholder {
+        color: $fontAdditional;
+        opacity: 0.6;
+    }
+    &:-ms-input-placeholder {
+        color: $fontAdditional;
+        opacity: 0.6;
+    }
+    &:-moz-placeholder {
+        color: $fontAdditional;
+        opacity: 0.6;
+    }
+}
+
+.ng2-simple-dropdown {
+    @include inputText();
+    padding: 0;
+    position: relative;
+    margin-top: 4px;
+    cursor: pointer;
+    &__input-wrapper {
+        padding-right: 38px;
+        height: 100%;
+        input {
+            @include inputText();
+            padding-right: 0px;
+            text-overflow: ellipsis;
+            border: 0;
+            height: 100%;
+            &[disabled] {
+                background-color: #fff;
+                border: 0;
+                color: $fontAdditional;
+                &::placeholder {
+                    color: $black;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: $black;
+                    opacity: 1;
+                }
+                &::-ms-input-placeholder {
+                    color: $black;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.disabled {
+        border: 1px solid #C4C3C1;
+        color: $fontDisabled;
+        input, input.disabled {
+            color: $fontDisabled;
+            cursor: default;
+        }
+        &:after {
+            content: "";
+            display: block;
+            height: 12px;
+            width: 12px;
+            border: solid #C4C3C1;
+            border-width: 1px 1px 0 0;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+            position: absolute;
+            top: -6px;
+            bottom: 0;
+            right: 12px;
+            margin: auto 0;
+        }
+        cursor: default;
+    }
+    &__content {
+        position: relative;
+        z-index: 100;
+        background-color: #fff;
+        border: 1px solid $grey;
+        border-top: 0;
+        font-size: 17px;
+        max-height: 200px;
+        overflow: auto;
+        &-item {
+            border-top: 1px solid $grey;
+            min-height: 40px;
+            line-height: 22px;                    
+            padding: 12px 10px 8px 10px;
+            &.selected, &:hover {
+                color: $blueB;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            &.selected {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        height: 12px;
+        width: 12px;
+        border: solid $black;
+        border-width: 1px 1px 0 0;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+        position: absolute;
+        top: -6px;
+        bottom: 0;
+        right: 12px;
+        margin: auto 0;
+    }
+
+    &.focused:after {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 8px;
+    }
+}

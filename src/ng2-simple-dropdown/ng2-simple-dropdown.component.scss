@@ -80,33 +80,7 @@ $fontDisabled: rgba(0, 0, 0, 0.3);
             }
         }
     }
-    &.disabled {
-        border: 1px solid #C4C3C1;
-        color: $fontDisabled;
-        input, input.disabled {
-            color: $fontDisabled;
-            cursor: default;
-        }
-        &:after {
-            content: "";
-            display: block;
-            height: 12px;
-            width: 12px;
-            border: solid #C4C3C1;
-            border-width: 1px 1px 0 0;
-            -webkit-transform: rotate(135deg);
-            -moz-transform: rotate(135deg);
-            -ms-transform: rotate(135deg);
-            -o-transform: rotate(135deg);
-            transform: rotate(135deg);
-            position: absolute;
-            top: -6px;
-            bottom: 0;
-            right: 12px;
-            margin: auto 0;
-        }
-        cursor: default;
-    }
+    
     &__content {
         position: relative;
         z-index: 100;
@@ -138,7 +112,7 @@ $fontDisabled: rgba(0, 0, 0, 0.3);
         display: block;
         height: 12px;
         width: 12px;
-        border: solid $black;
+        border: solid #C4C3C1;
         border-width: 1px 1px 0 0;
         -webkit-transform: rotate(135deg);
         -moz-transform: rotate(135deg);
@@ -150,6 +124,16 @@ $fontDisabled: rgba(0, 0, 0, 0.3);
         bottom: 0;
         right: 12px;
         margin: auto 0;
+    }
+
+    &.disabled {
+        border: 1px solid #C4C3C1;
+        color: $fontDisabled;
+        input, input.disabled {
+            color: $fontDisabled;
+            cursor: default;
+        }
+        cursor: default;
     }
 
     &.focused:after {

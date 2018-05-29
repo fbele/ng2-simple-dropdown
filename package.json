@@ -13,8 +13,7 @@
     "e2e": "ng e2e",
     "clean": "rimraf node_modules dist dist-lib",
     "clean:install": "npm run clean && npm install",
-    "prepare": "npm run build:lib",
-    "prepublish": "npm run build:lib"
+    "prepare": "npm run build:lib"    
   },
   "repository": {
     "type": "git",
